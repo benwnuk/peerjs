@@ -17,8 +17,8 @@ export const util = new class {
   readonly CLOUD_PORT = 443;
 
   // Browsers that need chunking:
-  readonly chunkedBrowsers = { Chrome: 1, chrome: 1 };
-  readonly chunkedMTU = 16300; // The original 60000 bytes setting does not work when sending data from Firefox to Chrome, which is "cut off" after 16384 bytes and delivered individually.
+  readonly chunkedBrowsers = {};
+  readonly chunkedMTU = 60000; // The original 60000 bytes setting does not work when sending data from Firefox to Chrome, which is "cut off" after 16384 bytes and delivered individually.
 
   // Returns browser-agnostic default config
   readonly defaultConfig = DEFAULT_CONFIG;
